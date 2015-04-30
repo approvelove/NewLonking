@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6252" systemVersion="14B25" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="AboutDB" representedClassName="AboutDB" syncable="YES">
+        <attribute name="aboutId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="imgAry" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ResourceDB" syncable="YES"/>
+    </entity>
+    <entity name="ActivitiesDB" representedClassName="ActivitiesDB" syncable="YES">
+        <attribute name="activitiesId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="imgAry" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ResourceDB" syncable="YES"/>
+    </entity>
+    <entity name="CustomersDB" representedClassName="CustomersDB" syncable="YES">
+        <attribute name="country" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="customersId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="interestedProductName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tel" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="EmployeeDB" representedClassName="EmployeeDB" syncable="YES">
+        <attribute name="employeeId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="realName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userName" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="HomePicDB" representedClassName="HomePicDB" syncable="YES">
+        <attribute name="homepicid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="updateTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="valid" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="resource" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ResourceDB" syncable="YES"/>
+    </entity>
+    <entity name="HotProductDB" representedClassName="HotProductDB" syncable="YES">
+        <attribute name="hotproductid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="orderindex" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="resource" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ResourceDB" syncable="YES"/>
+    </entity>
+    <entity name="LearningMaterialsDB" representedClassName="LearningMaterialsDB" syncable="YES">
+        <attribute name="learnMaterialsId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="uploadDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="uploader" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="materials" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ResourceDB" syncable="YES"/>
+    </entity>
+    <entity name="ProductsDB" representedClassName="ProductsDB" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="orderindex" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="productsId" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="img" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ResourceDB" syncable="YES"/>
+        <relationship name="modelImage" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ResourceDB" syncable="YES"/>
+        <relationship name="productDataImage" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ResourceDB" syncable="YES"/>
+        <relationship name="type" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ProductTypeDB" syncable="YES"/>
+    </entity>
+    <entity name="ProductTypeDB" representedClassName="ProductTypeDB" syncable="YES">
+        <attribute name="typeId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="typeName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="valid" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="resource" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ResourceDB" syncable="YES"/>
+    </entity>
+    <entity name="ResourceDB" representedClassName="ResourceDB" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="resourceId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="VedioDB" representedClassName="VedioDB" syncable="YES">
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="updateTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="updator" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="valid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="vedioid" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="resource" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ResourceDB" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="AboutDB" positionX="-36" positionY="63" width="128" height="103"/>
+        <element name="ActivitiesDB" positionX="0" positionY="126" width="128" height="88"/>
+        <element name="CustomersDB" positionX="-18" positionY="90" width="128" height="133"/>
+        <element name="EmployeeDB" positionX="-45" positionY="54" width="128" height="105"/>
+        <element name="HotProductDB" positionX="-27" positionY="108" width="128" height="90"/>
+        <element name="LearningMaterialsDB" positionX="-54" positionY="18" width="128" height="120"/>
+        <element name="ProductsDB" positionX="18" positionY="135" width="128" height="150"/>
+        <element name="ProductTypeDB" positionX="-27" positionY="108" width="128" height="105"/>
+        <element name="ResourceDB" positionX="-63" positionY="-18" width="128" height="88"/>
+        <element name="HomePicDB" positionX="-27" positionY="117" width="128" height="103"/>
+        <element name="VedioDB" positionX="-18" positionY="126" width="128" height="133"/>
+    </elements>
+</model>
